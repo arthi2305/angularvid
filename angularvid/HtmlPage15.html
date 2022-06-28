@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+    <meta charset="utf-8" />
+    <title>My Angular Js Page</title>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Script15.js"></script>
+
+</head>
+<body>
+    <h1>This is my normal webpage</h1>
+    <div>
+        10 + 20 ={{10 + 20}}
+    </div>
+
+    <div>
+        10 + 20 ={{10 + 20}}
+    </div>
+
+    <div>
+        {{ 1 == 1 }}
+    </div>
+
+    <div>
+        {{ { name: 'David', age : '30' }.name }}
+    </div>
+
+    <div>
+        {{ ['Mark', 'David', 'Sara'][2] }}
+    </div>
+
+    <div ng-controller="myController">
+        {{ message }}
+    </div>
+
+    <div>
+        {{ message }}
+    </div>
+
+    <div ng-controller="myController">
+        <div>First Name : {{ employee.firstName }}</div>
+        <div>Last Name : {{ employee.lastName }}</div>
+        <div>Gender : {{ employee.gender}}</div>
+    </div>
+
+    <div ng-controller="myController">
+
+        <img src="/Image/Screenshot (1).png" style="height:100px ;width:200px" />
+    </div>
+
+    <div ng-controller="myController">
+        <div>
+            Country : {{ country.name }}
+        </div>
+        <div>
+            Capital : {{ country.capital }}
+        </div>
+        <div>
+            <img src="{{country.flag}}"
+                 alt="{{ country.name + ' Flag' }}"
+                 style="height:100px; width:200px" />
+        </div>
+    </div>
+
+    <div ng-controller="myController">
+        <table>
+            <tr>
+                <td>
+                    First Name
+                </td>
+                <td>
+                    <input type="text" placeholder="Firstname"
+                           ng-model="employee.firstName" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Last Name
+                </td>
+                <td>
+                    <input type="text" placeholder="Lastname"
+                           ng-model="employee.lastName" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Gender
+                </td>
+                <td>
+                    <input type="text" placeholder="Gender"
+                           ng-model="employee.gender" />
+                </td>
+            </tr>
+        </table>
+
+        <br />
+
+        <table>
+            <tr>
+                <td>
+                    First Name
+                </td>
+                <td>
+                    {{ employee.firstName }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Last Name
+                </td>
+                <td>
+                    {{ employee.lastName }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Gender
+                </td>
+                <td>
+                    {{ employee.gender }}
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>
